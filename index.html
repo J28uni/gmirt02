@@ -366,40 +366,49 @@
                     <div class="row">
                     
                         <div class="col-lg-8 col-12 mx-auto">
-                            <div class="booking-form">
-                                
-                                <h2 class="text-center mb-lg-3 mb-2">Book an appointment</h2>
                             
-                                <form role="form" action="#booking" method="post">
+                                <div id="message"></div>
+                                <form id="uangKeamanan" name="submit-to-google-sheet" novalidate="novalidate">
                                     <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
-                                        </div>
+                                        <div class="col-md-6">
+                                            <h3>Input Nominal Uang</h3>
+                                            <div class="form-group">
+                                                <input class="form-control" id="name" type="text" placeholder="Masukan nama" required="required" data-validation-required-message="Nama tidak boleh kosong!" name="nama">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" id="alamat" type="text" placeholder="Masukan alamat" required="required" data-validation-required-message="Alamat tidak boleh kosong!" name="alamat">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" id="nominal" type="text" placeholder="Masukan nominal" required="required" data-validation-required-message="Jumlah tidak boleh kosong!" name="nominal">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                           
 
-                                        <div class="col-lg-6 col-12">
-                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
-                                        </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" id="keterangan" type ="text" placeholder="Isi Keterangan" required="required" data-validation-required-message="Keterangan tidak boleh kosong!" name="keterangan"></textarea>
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
 
-                                        <div class="col-lg-6 col-12">
-                                            <input type="telephone" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="Phone: 123-456-7890">
-                                        </div>
 
-                                        <div class="col-lg-6 col-12">
-                                            <input type="date" name="date" id="date" value="" class="form-control">
-                                            
-                                        </div>
 
-                                        <div class="col-12">
-                                            <textarea class="form-control" rows="5" id="message" name="message" placeholder="Additional Message"></textarea>
                                         </div>
-
-                                        <div class="col-lg-3 col-md-4 col-6 mx-auto">
-                                            <button type="submit" class="form-control" id="submit-button">Book Now</button>
+                                       
+                                        <div class="clearfix"></div>
+                                        <div class="col-lg-12 text-center">
+                                            <div id="success"></div>
+                                            <button id="sendMessageButton" class="btn btn-primary btn-kirim" data-text="KIRIM" type="submit">KIRIM</button>
+        
+                                            <button id="sendMessageButton" class="btn btn-danger btn-loading d-none" data-text="Loading" type="button" disabled><span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>LOADING</button>
                                         </div>
                                     </div>
                                 </form>
+                            
 
-                            </div>
+
                         </div>
 
                     </div>
@@ -409,58 +418,23 @@
         </main>
 
         <footer class="site-footer section-padding" id="contact">
+        
             <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-5 me-auto col-12">
-                        <h5 class="mb-lg-4 mb-3">Opening Hours</h5>
-
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex">
-                                Sunday : Closed
-                            </li>
-
-                            <li class="list-group-item d-flex">
-                                Monday, Tuesday - Firday
-                                <span>8:00 AM - 3:30 PM</span>
-                            </li>
-
-                            <li class="list-group-item d-flex">
-                                Saturday
-                                <span>10:30 AM - 5:30 PM</span>
-                            </li>
-                        </ul>
-                    </div>
-
                     <div class="col-lg-2 col-md-6 col-12 my-4 my-lg-0">
-                        <h5 class="mb-lg-4 mb-3">Our Clinic</h5>
-
-                        <p><a href="mailto:hello@company.co">hello@company.co</a><p>
-
-                        <p>123 Digital Art Street, San Diego, CA 92123</p>
+                        <h5 class="mb-lg-4 mb-3">Alamat Perumahan</h5>
+                        <p>Perum Graha Mekarsari Indah</p>
+                        <p>Kp. Pondok Cikurus</p>
+                        <p>Kec. Rajeg, Kab. Tangerang</p>
+                        <p>Kodepos 15540</p>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 ms-auto">
-                        <h5 class="mb-lg-4 mb-3">Socials</h5>
-
-                        <ul class="social-icon">
-                            <li><a href="#" class="social-icon-link bi-facebook"></a></li>
-
-                            <li><a href="#" class="social-icon-link bi-twitter"></a></li>
-
-                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
-
-                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
-                        <p class="copyright-text">Copyright © Medic Care 2021 
-                        <br><br>Design: <a href="https://templatemo.com" target="_parent">TemplateMo</a></p>
-                    </div>
-
                 </div>
-            </section>
+                <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
+                    <p class="copyright-text">Copyright © 2024
+                    <br>Develop By :  Ahmad Juni</p>
+                </div>
+            </div>
+            
         </footer>
 
         <!-- JAVASCRIPT FILES -->
@@ -469,12 +443,12 @@
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/scrollspy.min.js"></script>
         <script src="js/custom.js"></script>
-<!--
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="../gmirt02/js/bootstrap.bundle.min.js"></script>
+        <!-- ALL PLUGINS -->
+        <script src="js/custom.js"></script>
+        <script src="js/jquery.vide.js"></script>
+        <script src="../gmirt02/js/mail.js"></script>
 
-TemplateMo 566 Medic Care
-
-https://templatemo.com/tm-566-medic-care
-
--->
     </body>
 </html>
